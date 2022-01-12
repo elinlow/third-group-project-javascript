@@ -28,6 +28,49 @@
   color: #61dafb;
 }
 
+.start {
+  height: 100vh;
+  background-image: url(./assets/banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-branding {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 40vh;
+}
+
+.logo {
+  max-width: 50%;
+  width: 100%;
+}
+
+.button {
+  background-image: linear-gradient(red, rgb(255, 217, 0));
+  border: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+}
+
+.headline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
