@@ -1,18 +1,22 @@
-import { v4 as uuid4} from 'uuid';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTag } from "@fortawesome/free-solid-svg-icons";
 
-
-
-const [tag, setTag] = useState("");
-
-const picTag = () => {
-
+function PicTag() {
+    const [showField, setshowField] = useState(false);
+    const onClick = () => setshowField(true);
+  
     return (
-        <>
-        </>
-    )
-}
+      <>
+        <FontAwesomeIcon onClick={onClick} icon={faTag} className='header__icon'></FontAwesomeIcon>
 
-
-
-export default picTag;
+        {showField ? <Text /> : null}
+      </>
+    );
+  }
+  
+  const Text = () => <div><input className='input-tag' placeholder='Type any name' type="text" name="name" /></div>;
+  
+  export default PicTag;
+  
+        //<button onClick={onClick}>Click me</button>

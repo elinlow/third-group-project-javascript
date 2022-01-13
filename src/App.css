@@ -7,25 +7,36 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 70px;
+  background-color: white;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header__container {
+  display: flex;
+  flex-direction: row;
+  padding-right: 15px;
+}
+
+.header__logo {
+  max-width: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  padding-left: 15px;
+}
+
+.header__icon {
+  font-size: 30px;
+  color: rgb(255, 102, 0);
+  padding: 0% 6% 0% 6%;
 }
 
 .start {
@@ -44,7 +55,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 40vh;
+  height: 60vh;
 }
 
 .logo {
@@ -71,11 +82,64 @@
   color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-page {
+  height: 100vh;
 }
+
+.user-img {
+  width: 100%;
+  height: 390px;
+  overflow: hidden !important;
+}
+
+.img-info {
+  display: flex;
+  flex-direction: row;
+  max-height: 40px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+.profile-pic {
+  max-width: 40px !important;
+  width: 100%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.username {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: rgb(63, 63, 63);
+  padding-left: 10px;
+  margin: 0% !important;
+}
+
+.input-tag {
+  position: absolute;
+  top: 320px;
+  left: 80px;
+  height: 30px;
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.63);
+  border: 2px solid rgb(194, 88, 1);
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  padding-left: 10px;
+  color: rgb(0, 0, 0);
+  
+}
+
+
+
