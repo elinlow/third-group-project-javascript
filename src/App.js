@@ -1,9 +1,12 @@
+import SharePicture from "./components/SharePicture";
 import "./App.css";
-import ReactDOM from "react-dom";
-import SharePictures from "./components/SharePicture";
 
-const App = () => {
-  return ReactDOM.render(<SharePictures />, document.getElementById("root"));
-};
+function App() {
+  return (
+    <div className="App">
+      <SharePicture></SharePicture>
+    </div>
+  );
+}
 
 export default App;
