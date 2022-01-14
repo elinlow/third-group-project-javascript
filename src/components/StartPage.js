@@ -1,7 +1,6 @@
 import ReusableButton from "./ReusableButton";
 import { Link } from "react-router-dom";
 import Logotype from "./Logotype";
-import { useNavigate } from 'react-router-dom';
 
 const StartPage = () => {
 
