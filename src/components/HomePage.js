@@ -1,6 +1,6 @@
 import userImg from '../assets/user-img.png';
 import ProfilePic from '../assets/profile-picture.png';
-import PicTag from './CreatePicTag';
+import PicTag from './Tag/PicTag';
 import React from 'react';
 import MainHeader from './MainHeader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

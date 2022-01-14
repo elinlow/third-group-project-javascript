@@ -2,6 +2,7 @@ import StartPage from './components/StartPage';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HomePage from './components/HomePage';
 import './App.css';
+import './sissel.css';
 
 function App() {
   return (
