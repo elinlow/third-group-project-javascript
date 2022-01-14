@@ -3,13 +3,13 @@ import React, { useState } from 'react';
     
 const TagForm = () => {
     
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState("");
     
     const handleSubmit = (e) => {
     
         e.preventDefault();
 
-        console.log(`Form submitted, ${input}`);    
+        console.log(`Tag added as, ${input}`);    
 
         
         
@@ -28,10 +28,11 @@ const TagForm = () => {
                 <input 
                     className='input-tag d-flex' 
                     placeholder='Type any name' 
-                    type="text" name="name" 
+                    type="text" name="tag" 
                     onChange = {(e) => setInput(e.target.value)} 
-                    value = {input}></input>
-                    <button type='submit'>Tag</button>
+                    value = {input}>
+                </input>
+                <button type='submit' value='submit'>Tag</button>
             </form>
         </div>
     )
