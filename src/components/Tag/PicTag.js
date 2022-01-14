@@ -6,21 +6,24 @@ import TagForm from './TagForm';
 function PicTag() {
     const [showField, setshowField] = useState(false);
     const onClick = () => setshowField(true);
+
+
+  const Form = () =>     
+  <div>   
+    <TagForm></TagForm>
+  </div>  
   
     return (
       <>
-
-        {showField ? <Text /> : null}
+         {showField ? <Form /> : null}
         <FontAwesomeIcon onClick={onClick} icon={faTag} className='header__icon'></FontAwesomeIcon>
 
       </>
     );
-  }
+}
 
-  const Text = () =>     
-    <div>   
-        <TagForm></TagForm>
-    </div>
+
     
-  export default PicTag;
+export default PicTag;
   
+        
