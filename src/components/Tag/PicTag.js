@@ -15,12 +15,12 @@ function PicTag() {
 
       </>
     );
-  }
+}
 
   const Text = () =>     
     <div>   
         <TagForm></TagForm>
     </div>
     
-  export default PicTag;
+export default PicTag;
   
