@@ -6,8 +6,6 @@ import MainHeader from './MainHeader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComment } from "@fortawesome/free-solid-svg-icons";
 
-
-
 const HomePage = () => {
     return (
         <div className='home-page'>
@@ -26,7 +24,6 @@ const HomePage = () => {
                     <FontAwesomeIcon icon={faComment} className='header__icon' />
                 </div>
             </div>
-            
         </div>
     )
 }

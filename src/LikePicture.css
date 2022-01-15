@@ -1,0 +1,9 @@
+.likeButton {
+    background: none;
+    border: none;
+    color: rgb(235, 147, 162);
+}   
+
+.likeButton:focus {
+    color: rgba(204, 50, 50, 0.918);
+}
