@@ -1,7 +1,13 @@
 import React from 'react';
+import {Link, link } from "react-router-dom";
+import LogIn from "./LogIn";
+import App from '../App.css';
+import  './Ben.css';
 
 
-class LogIn extends React.Component {
+
+
+class CreateAccountFormFields extends React.Component {
     constructor(props) {
       super(props);
       this.state = {value: ''};
@@ -17,21 +23,22 @@ class LogIn extends React.Component {
     handleSubmit(event) {
       event.preventDefault();
 
-      let myData = localStorage.getItem('Account');
-
       let result = this.state.value;
-      let accountHistory = JSON.parse(localStorage.getItem("Account"));
+      let accountHistory = JSON.parse(localStorage.getItem("Account")) || [];
+      localStorage.setItem("Account", JSON.stringify(accountHistory));
+
+     
+      let myData = localStorage.getItem('Account');
       
       let trueFalse = myData.includes(result);
       console.log(trueFalse)
       trueFalseFunction();
       function trueFalseFunction(){
         if(trueFalse === true){
-            alert("Welcome");
-            localStorage.setItem("Account", JSON.stringify(accountHistory));
+            return alert("Username is Taken");
         }else{
-             alert("Username is taken");
-            
+            accountHistory.push(result);
+            localStorage.setItem("Account", JSON.stringify(accountHistory));  
         }
     }
 
@@ -46,10 +53,10 @@ class LogIn extends React.Component {
             User Name:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Login" />
+          <input type="submit" value="Submit" />
         </form>
       );
     }
   }
 
-  export default LogIn
+  export default CreateAccountFormFields
