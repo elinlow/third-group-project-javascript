@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 class LogIn extends React.Component {
@@ -45,7 +46,9 @@ class LogIn extends React.Component {
           <label>
             <input className='input-field' placeholder='User Name' type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input className='Login-btn' type="submit" value="Login" />
+          <Link to="/HomePage" >
+            <input className='Login-btn' type="submit" value="Login" />
+          </Link>
         </form>
       );
     }

@@ -81,6 +81,18 @@
     color: rgb(36, 36, 36);
   }
 
+  .headline-3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: rgb(36, 36, 36);
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
   .form-account {
     display: flex;
     flex-direction: column;
