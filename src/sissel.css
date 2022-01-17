@@ -70,6 +70,58 @@
     font-size: 15px;
     color: white;
   }
+
+/*-------------------Login + Create Account--------------------*/
+
+
+  .headline-2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: rgb(36, 36, 36);
+  }
+
+  .form-account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 35px;
+  }
+
+  .input-field {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(36, 36, 36);
+  }
+
+  .Login-btn {
+    background-image: linear-gradient(red, rgb(255, 217, 0));
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+  }
+
+  .footer-account {
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .footer-img {
+    width: 100%;
+    height: auto;
+  }
+
+/*-------------------END Login + Create Account--------------------*/
   
   .home-page {
     height: 100vh;

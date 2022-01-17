@@ -1,6 +1,7 @@
 import StartPage from './components/StartPage';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import LogIn from './components/LogIn';
+import LogInPage from './components/LogInPage';
+import CreateAccontPage from './components/CreateAccontPage';
 import './App.css';
 import './sissel.css';
 
@@ -10,7 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<StartPage/>}></Route>
-          <Route path="/LogIn" element={<LogIn/>}></Route>
+          <Route path="/LogInPage" element={<LogInPage/>}></Route>
+          <Route path="/CreateAccontPage" element={<CreateAccontPage/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

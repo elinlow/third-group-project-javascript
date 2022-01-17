@@ -41,12 +41,11 @@ class LogIn extends React.Component {
   
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
+        <form className='form-account' onSubmit={this.handleSubmit}>
           <label>
-            User Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input className='input-field' placeholder='User Name' type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Login" />
+          <input className='Login-btn' type="submit" value="Login" />
         </form>
       );
     }
