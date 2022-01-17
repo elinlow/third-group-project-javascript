@@ -10,10 +10,7 @@ const TagForm = () => {
     const handleSubmit = (e) => {
     
         e.preventDefault();
-
         console.log(`Tag added as, ${input}`);    
-
-        
         
         //saving input to local storage
         const tag = [];
@@ -22,8 +19,6 @@ const TagForm = () => {
 
         //...
         const storedTags = JSON.parse(localStorage.getItem("tag"));
-
-
     }
 
     const InputField = () => 
