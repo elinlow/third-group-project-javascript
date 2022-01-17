@@ -1,6 +1,6 @@
 import StartPage from './components/StartPage';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Login from './components/LogIn';
+import LogIn from './components/LogIn';
 import './App.css';
 import './sissel.css';
 
