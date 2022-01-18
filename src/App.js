@@ -1,12 +1,18 @@
-import SharePicture from "./components/SharePicture";
-import "./App.css";
-import UserBio from "./components/UserBio";
+import StartPage from './components/StartPage';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import LogIn from './components/LogIn';
+import './App.css';
+import './sissel.css';
 
 function App() {
   return (
     <div className="App">
-      <SharePicture></SharePicture>
-      <UserBio></UserBio>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<StartPage/>}></Route>
+          <Route path="/LogIn" element={<LogIn/>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
