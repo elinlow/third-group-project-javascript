@@ -9,7 +9,7 @@ const StartPage = () => {
             <div className="site-branding">
                 <Logotype />
             </div>
-            <Link to="/HomePage">
+            <Link to="/LogIn2">
                 <ReusableButton>Login</ReusableButton>
             </Link>
             <h2 className="headline pt-4">Create an account</h2>

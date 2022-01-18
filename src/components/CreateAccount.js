@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, link } from "react-router-dom";
 import LogIn from "./LogIn";
 import App from '../App.css';
-import  './Ben.css';
+import  '../Ben.css'
 
 
 

@@ -1,4 +1,13 @@
 import React from 'react';
+import '../Ben.css'
+import { Link } from "react-router-dom";
+import ReusableButton from "./ReusableButton";
+import { Route, Redirect, Navigate } from 'react-router-dom'
+
+
+
+
+
 
 
 class LogIn extends React.Component {
@@ -15,22 +24,22 @@ class LogIn extends React.Component {
     }
   
     handleSubmit(event) {
-      event.preventDefault();
+      
 
       let myData = localStorage.getItem('Account');
 
       let result = this.state.value;
       let accountHistory = JSON.parse(localStorage.getItem("Account"));
       
+
       let trueFalse = myData.includes(result);
       console.log(trueFalse)
       trueFalseFunction();
       function trueFalseFunction(){
         if(trueFalse === true){
-            alert("Welcome");
-            localStorage.setItem("Account", JSON.stringify(accountHistory));
+            return <Navigate to='/HomePage' />
         }else{
-             alert("Username is taken");
+             alert("Username doesnt exsist");
             
         }
     }
@@ -41,7 +50,7 @@ class LogIn extends React.Component {
   
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}  >
           <label>
             User Name:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
