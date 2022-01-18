@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+// import { Container } from "react-bootstrap";
 
 export default function SharePictures() {
   const [images, setImages] = useState([]);
@@ -20,6 +21,7 @@ export default function SharePictures() {
 
   return (
     <div>
+      {/* <Container fluid="md"> */}
       <label htmlFor="upload-button">
         {imageURLs.map((imageSrc) => (
           <img
@@ -42,6 +44,7 @@ export default function SharePictures() {
         accept="images/*"
         onChange={onImageChange}
       />
+      {/* </Container> */}
     </div>
   );
 }
