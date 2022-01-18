@@ -1,0 +1,14 @@
+.like-button {
+    background: none;
+    border: none;
+    color: rgb(235, 147, 162);
+}   
+
+.like-button:focus {
+    color: rgba(204, 50, 50, 0.918);
+}
+
+.dog {
+    width: 30%;
+    height: 30%;
+}
