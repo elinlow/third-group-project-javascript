@@ -7,7 +7,6 @@ function PicTag() {
     const [showField, setshowField] = useState(false);
     const onClick = () => setshowField(true);
 
-
   const Form = () =>     
   <div>   
     <TagForm></TagForm>
@@ -17,11 +16,9 @@ function PicTag() {
       <>
          {showField ? <Form /> : null}
         <FontAwesomeIcon onClick={onClick} icon={faTag} className='header__icon'></FontAwesomeIcon>
-
       </>
     );
 }
-
 
     
 export default PicTag;
