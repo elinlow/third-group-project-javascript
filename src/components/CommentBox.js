@@ -1,39 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 class CommentBox extends Component {
-    render() {
-        const { commentValue, handleCommentValue, 
-        enterCommentLine, submitCommentLine} = this.props;
-        const enableCommentButton = () => {
-        return (commentValue ? false : true);
-    }
-
-    const changeCommentButtonStyle = () => {
+    changeCommentButtonStyle = () => {
+        const { commentValue } = this.props;
         return (commentValue ? "comments-button-enabled" : 
         "comments-button-disabled");
     }
 
-    return (
-        <div className="comments-box">
-            <input 
-                onKeyPress={enterCommentLine} 
-                value={commentValue}
-                id="comments-input" 
-                onChange={handleCommentValue}
-                type="text" 
-                placeholder="Add a comment..." 
-            />
-            <button 
-                onClick={submitCommentLine} 
-                type="submit"     
-                className="comments-button"
-                id={changeCommentButtonStyle()}
-                disabled={enableCommentButton()}
-            >
-                Post
-            </button>
-        </div>
-    )}
+    enableCommentButton = () => {
+        const { commentValue } = this.props;
+        return (commentValue ? false : true);
+    }
+
+    render() {
+        const { commentValue, handleCommentValue, enterCommentLine } = this.props;
+
+        return (
+            <div className="comments-box">
+                <input 
+                    onKeyPress={enterCommentLine} 
+                    value={commentValue}
+                    id="comments-input" 
+                    onChange={(e) => {
+                        handleCommentValue();
+                        console.log(e)
+                    }}
+                    type="text" 
+                    placeholder="Add a comment..." 
+                />
+                <button 
+                    onClick={this.props.submitCommentLine} 
+                    type="submit"     
+                    className="comments-button"
+                    id={this.changeCommentButtonStyle()}
+                    disabled={this.enableCommentButton()}
+                >
+                    Post
+                </button>
+            </div>
+        )
+    }
 }
 
 export default CommentBox;

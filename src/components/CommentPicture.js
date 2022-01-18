@@ -1,33 +1,88 @@
-import React from 'react';
 import React, { useState } from 'react';
+import CommentBox from './CommentBox';
 
-class CommentPicture extends Component {
-    constructor() {
-        super();
-        this.state = {
-            commentValue: "",
-            commentLine: [{ commentId:"", text: "", }],
-        }
-    };
-    
-    handleCommentValue = (e) => {
-        this.setState({
+let commentCounter = 1;
+
+const CommentPicture = () => {
+    const [comment, updateComment] = useState({
+        commentValue: "",
+        commentLine: [
+            {
+                commentId: "",
+                text: ""
+            }
+        ]
+    });
+
+    const handleCommentValue = (e) => {
+        console.log('handleCommentValue', e)
+        updateComment({
             commentValue: e.target.value,
-        });
+            ...comment
+        })
     };
 
-    render() {
-        return (
-            <>
-                <CommentBox
-                    commentValue={this.state.commentValue}
-                    handleCommentValue={this.handleCommentValue}
-                    enterCommentLine={this.enterCommentLine}
-                    submitCommentLine={this.submitCommentLine}
-                /> 
-            </>
-        );
+    const setCommentLine = () => {
+        updateComment({
+            commentLine: [
+                { commentId: commentCounter++, text: comment.commentValue }
+            ],
+            commentValue: "",
+        })
+    };
+
+    const submitCommentLine = (e) => {
+        e.preventDefault();
+        setCommentLine();
+    };
+
+    const changeCommentButtonStyle = () => {
+        return (comment.commentValue ? "comments-button-enabled" : 
+        "comments-button-disabled");
     }
-}
+
+    const enableCommentButton = () => {
+        return (comment.commentValue ? false : true);
+    }
+
+    const enterCommentLine = (e) => {
+        if (e.charCode === 13) {
+            setCommentLine();
+        }
+    
+        return (
+            <div className="comments-box">
+                <input 
+                    onKeyPress={enterCommentLine} 
+                    value={comment.commentValue}
+                    id="comments-input" 
+                    onChange={handleCommentValue}
+                    type="text" 
+                    placeholder="Add a comment..." 
+                />
+                <button 
+                    onClick={submitCommentLine} 
+                    type="submit"    
+                    className="comments-button"
+                    id={changeCommentButtonStyle()}
+                    disabled={enableCommentButton()}
+                >
+                    Post
+                </button>
+            </div>
+        )
+    }
+
+    return (
+        <>
+            <CommentBox
+                commentValue={comment.commentValue}
+                handleCommentValue={(e) => handleCommentValue(e)}
+                enterCommentLine={enterCommentLine}
+                submitCommentLine={submitCommentLine}
+            /> 
+        </>
+    );
+};
 
 export default CommentPicture;

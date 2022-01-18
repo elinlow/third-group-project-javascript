@@ -19,8 +19,8 @@ const LikePicture = () => {
       </button>
       <div>
         <CommentPicture />
-        <CommentBox />
-        <Comment />
+        {/* <CommentBox /> */}
+        {/* <Comment /> */}
       </div>
     </div>
   );
