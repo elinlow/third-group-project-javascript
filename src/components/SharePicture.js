@@ -22,11 +22,17 @@ export default function SharePictures() {
     <div>
       <label htmlFor="upload-button">
         {imageURLs.map((imageSrc) => (
-          <img src={imageSrc} alt="uploaded img" width="300" height="300" />
+          <img
+            key={"imgKey"}
+            src={imageSrc}
+            alt="uploaded img"
+            width="300"
+            height="300"
+          />
         ))}
-        <>
+        <div>
           <h5 style={{ fontSize: "55px" }}>+</h5>
-        </>
+        </div>
       </label>
       <input
         type="file"
