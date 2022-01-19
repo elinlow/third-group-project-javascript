@@ -1,9 +1,25 @@
-/* .App {
-  height: 100vh;
-} */
-
 .SharePicture {
   border: 2px solid black;
   height: 100vh;
+  display: flex;
+}
+
+.SharePictureBtn {
+  width: 100%;
   overflow: hidden;
+}
+
+.upload-button {
+  color: rgb(255, 102, 0);
+  display: flex;
+  justify-content: center;
+}
+
+.SharePictureBtn img {
+  width: 50%;
+}
+
+.ProfilePic img {
+  width: 100%;
+  max-width: 50%;
 }

@@ -11,15 +11,17 @@ function ProfilePage() {
       <MainHeader></MainHeader>
       <div>
         <Stack gap={2} className="col-md-5 mx-auto py-3">
-          <img
-            className="img-fluid profile-pic mx-auto py-3"
-            src={ProfilePic}
-            alt="User"
-          ></img>
+          <div className="ProfilePic">
+            <img
+              className="img-fluid mx-auto py-3"
+              src={ProfilePic}
+              alt="User"
+            ></img>
+          </div>
           <UserBio></UserBio>
         </Stack>
       </div>
-      <Container className="SharePicture my-5 py-5">
+      <Container className="SharePicture my-5 p-5">
         <SharePictures></SharePictures>
       </Container>
     </>

@@ -19,15 +19,15 @@ export default function SharePictures() {
   };
 
   return (
-    <div>
-      <label htmlFor="upload-button">
+    <div className="SharePictureBtn">
+      <label className="upload-button" htmlFor="upload-button">
         {imageURLs.map((imageSrc) => (
           <img
             key={"imgKey"}
             src={imageSrc}
             alt="uploaded img"
-            width="300"
-            height="300"
+            width="100%"
+            height="50%"
           />
         ))}
         <div>
