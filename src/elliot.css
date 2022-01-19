@@ -1,0 +1,9 @@
+/* .App {
+  height: 100vh;
+} */
+
+.SharePicture {
+  border: 2px solid black;
+  height: 100vh;
+  overflow: hidden;
+}
