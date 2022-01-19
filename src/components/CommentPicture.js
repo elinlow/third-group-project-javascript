@@ -15,7 +15,6 @@ const CommentPicture = () => {
     });
 
     const handleCommentValue = (e) => {
-        console.log('handleCommentValue', e)
         updateComment({
             commentValue: e.target.value,
             ...comment
@@ -51,35 +50,37 @@ const CommentPicture = () => {
         }
     
         return (
-            <div className="comments-box">
-                <input 
-                    onKeyPress={enterCommentLine} 
-                    value={comment.commentValue}
-                    id="comments-input" 
-                    onChange={handleCommentValue}
-                    type="text" 
-                    placeholder="Add a comment..." 
-                />
-                <button 
-                    onClick={submitCommentLine} 
-                    type="submit"    
-                    className="comments-button"
-                    id={changeCommentButtonStyle()}
-                    disabled={enableCommentButton()}
-                >
-                    Post
-                </button>
-            </div>
+            <div>
+                <div className="comments-box">
+                    <input 
+                        onKeyPress={e => enterCommentLine(e)} 
+                        value={comment.commentValue}
+                        id="comments-input" 
+                        onChange={e => handleCommentValue(e)}
+                        type="text" 
+                        placeholder="Add a comment..." 
+                    />
+                    <button 
+                        onClick={submitCommentLine} 
+                        type="submit"    
+                        className="comments-button"
+                        id={changeCommentButtonStyle()}
+                        disabled={enableCommentButton()}
+                    >
+                        Post123
+                    </button>
+                </div>
+            </div>  
         )
     }
 
     return (
         <>
             <CommentBox
-                commentValue={comment.commentValue}
-                handleCommentValue={(e) => handleCommentValue(e)}
-                enterCommentLine={enterCommentLine}
-                submitCommentLine={submitCommentLine}
+                // commentValue={comment.commentValue}
+                // handleCommentValue={(e) => handleCommentValue(e)}
+                // enterCommentLine={e => enterCommentLine(e)}
+                // submitCommentLine={e => submitCommentLine(e)}
             /> 
         </>
     );
