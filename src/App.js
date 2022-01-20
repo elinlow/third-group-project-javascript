@@ -4,6 +4,7 @@ import LogIn from './components/LogIn';
 import './App.css';
 import LikePicture from './components/LikePicture';
 import './sissel.css';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
