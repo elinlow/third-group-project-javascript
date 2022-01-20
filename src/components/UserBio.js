@@ -3,7 +3,8 @@ import React, { Component } from "react";
 class UserBio extends Component {
   constructor(props) {
     super(props);
-    this.theTextInput = React.createRef() }
+    this.theTextInput = React.createRef();
+  }
   state = {
     value: "Some text here",
     isInEditMode: false,
@@ -25,7 +26,11 @@ class UserBio extends Component {
   renderEditView = () => {
     return (
       <div>
-        <input type="text" defaultValue={this.state.value} ref={this.theTextInput} />
+        <input
+          type="text"
+          defaultValue={this.state.value}
+          ref={this.theTextInput}
+        />
         <button onClick={this.changeEditMode}>X</button>
         <button onClick={this.updateComponentValue}>OK</button>
       </div>
