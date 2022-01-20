@@ -9,10 +9,12 @@ const StartPage = () => {
             <div className="site-branding">
                 <Logotype />
             </div>
-            <Link to="/HomePage">
+            <Link to="/LogInPage">
                 <ReusableButton>Login</ReusableButton>
             </Link>
-            <h2 className="headline pt-4">Create an account</h2>
+            <Link to="/CreateAccontPage">
+                <h2 className="headline pt-4">Create an account</h2>
+            </Link>
         </div>
      )
 }
