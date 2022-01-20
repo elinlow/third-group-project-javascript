@@ -1,10 +1,9 @@
 const CommentList = ({ commentLine }) => {
-
     return (
-        <ul className="comments-list">
+        <ul>
             {commentLine.map(comment => {
                 return comment.text != '' && (
-                    <li className="comment"  
+                    <li 
                         key={comment.commentId}
                     >
                         <span>User: {comment.commentId}</span>
