@@ -21,9 +21,6 @@ const CommentBox = ({ commentValue, enterCommentLine, handleCommentValue, submit
                 */ 
                 onClick={submitCommentLine} 
                 type="submit"     
-                /*
-                denna funktionen kallas på direkt när komponenten renderar och kollar om det finns några tecken i input-fältet och gör knappen klickar eller ej.
-                */
                 disabled={!commentValue}
             >
                 Post
