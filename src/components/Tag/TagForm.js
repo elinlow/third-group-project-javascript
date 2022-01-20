@@ -35,7 +35,7 @@ const TagForm = () => {
     </>
     return (
         <div>
-            
+            <div className='tag-name'> {input} </div>
             <form className='tag-form' onClick = {handleSubmit}>
                 {show ? <InputField /> : null}  
                 {show ?  <button onClick={onClick} className='submit-tag' type='submit' value='submit'>Tag</button> : null}           

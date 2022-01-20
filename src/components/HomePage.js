@@ -4,6 +4,7 @@ import img from '../assets/user-img-3.png';
 import PicTag from './Tag/PicTag';
 import React from 'react';
 import MainHeader from './MainHeader';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComment } from "@fortawesome/free-solid-svg-icons";
 
@@ -21,7 +22,9 @@ const HomePage = () => {
                 </div>
                 <div>
                     <PicTag></PicTag>
-                    <FontAwesomeIcon icon={faHeart} className='header__icon' />
+                    <Link to="/LikePicture">
+                        <FontAwesomeIcon icon={faHeart} className='header__icon' />
+                    </Link>
                     <FontAwesomeIcon icon={faComment} className='header__icon' />
                 </div>
             </div>

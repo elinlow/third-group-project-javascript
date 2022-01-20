@@ -17,9 +17,7 @@ function App() {
           <Route path="/LogInPage" element={<LogInPage/>}></Route>
           <Route path="/CreateAccontPage" element={<CreateAccontPage/>}></Route>
           <Route path="/HomePage" element={<HomePage/>}></Route>
-          <Route path="/HomePage" element={<HomePage/>}></Route>
           <Route path="/LikePicture" element={<LikePicture/>}></Route>
-          <Route path="/LogIn" element={<LogIn/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
