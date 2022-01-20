@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, link } from "react-router-dom";
 import LogIn from "./LogIn";
 import App from '../App.css';
+import ReusableButton from './ReusableButton';
 
 
 
@@ -48,10 +49,13 @@ class CreateAccountFormFields extends React.Component {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            User Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input className='input-field' type="text" value={this.state.value} onChange={this.handleChange} placeholder='User Name:'/>
           </label>
-          <input type="submit" value="Submit" />
+          <div className='d-block pt-5'>
+          <ReusableButton>
+            <input className='create-account' type="submit" value="Submit" />
+          </ReusableButton>
+          </div>
         </form>
       );
     }

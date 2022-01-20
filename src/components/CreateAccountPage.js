@@ -15,7 +15,7 @@ const CreateAccontPage = () => {
                 <h2 className='headline-2 pt-5'>Create Account</h2>
             </div>
             <CreateAccount />
-            <Link to="/">
+            <Link to="/" className='Path'>
                 <h2 className='headline-3 pt-5'>Cancel</h2>
             </Link>
             <div className='footer-account'>

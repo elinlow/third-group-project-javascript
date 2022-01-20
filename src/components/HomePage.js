@@ -20,11 +20,9 @@ const HomePage = () => {
                     <img className='img-fluid profile-pic' src={ProfilePic} alt='User'></img>
                     <h2 className='username'>Username</h2>
                 </div>
-                <div>
+                <div className='links'>
                     <PicTag></PicTag>
-                    <Link to="/LikePicture">
-                        <FontAwesomeIcon icon={faHeart} className='header__icon' />
-                    </Link>
+                    <FontAwesomeIcon icon={faHeart} className='header__icon' />
                     <FontAwesomeIcon icon={faComment} className='header__icon' />
                 </div>
             </div>

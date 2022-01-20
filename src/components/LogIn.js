@@ -45,7 +45,7 @@ class LogIn extends React.Component {
           <label>
             <input className='input-field' placeholder='User Name' type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <Link to="/HomePage" >
+          <Link to="/HomePage" className='Path' >
             <input className='Login-btn' type="submit" value="Login" />
           </Link>
         </form>
