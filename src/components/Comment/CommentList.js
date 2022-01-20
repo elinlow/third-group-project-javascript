@@ -7,8 +7,8 @@ const CommentList = ({ commentLine }) => {
                     <li className="comment"  
                         key={comment.commentId}
                     >
-                        <span>Comment ID: {comment.commentId}</span>
-                        <p>Comment Text: {comment.text}</p>
+                        <span>User: {comment.commentId}</span>
+                        <p>Comment: {comment.text}</p>
                     </li>
                 )})
             }

@@ -3,9 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComment } from "@fortawesome/free-solid-svg-icons";
 import '../LikePicture.css';
 import cuteDog from '../assets/dog.png'
-// import CommentPicture from './CommentPicture';
-// import CommentBox from './CommentBox';
-// import Comment from './Comment/index.js';
 import MainHeader from './MainHeader';
 import Comment from './Comment/index.js';
 
