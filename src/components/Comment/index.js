@@ -46,7 +46,6 @@ class Comment extends Component {
     };
 
     enterCommentLine = event => {
-        console.log(event.charCode)
         if (event.charCode === 13 && event.target.value) {
             this.setCommentLine();
         }
