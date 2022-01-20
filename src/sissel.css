@@ -185,7 +185,7 @@
     left: 80px;*/
     height: 30px;
     width: 150px;
-    background-color: rgba(255, 255, 255, 0.63);
+    background-color: rgba(255, 255, 255, 0.842);
     border: 2px solid rgb(194, 88, 1);
     border-radius: 12px;
     font-family: 'Montserrat', sans-serif;
@@ -217,4 +217,19 @@
   font-weight: 400;
   font-size: 15px;
   color: white;
+}
+
+.tag-name {
+  position: absolute;
+  top: 350px;
+  left: 85px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  padding-left: 10px;
+  color: rgb(36, 36, 36);
+  background-color: rgba(255, 255, 255, 0.548);
+  padding: 1%;
+  border-radius: 15px;
+  width: 80px;
 }
