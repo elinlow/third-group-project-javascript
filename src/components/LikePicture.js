@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComment } from "@fortawesome/free-solid-svg-icons";
 import '../LikePicture.css';
 import cuteDog from '../assets/dog.png'
-import CommentPicture from './CommentPicture';
-import CommentBox from './CommentBox';
-import Comment from './Comment/index.js';
+// import CommentPicture from './CommentPicture';
+// import CommentBox from './CommentBox';
+// import Comment from './Comment/index.js';
 import MainHeader from './MainHeader';
+import Comment from './Comment/index.js';
 
 const LikePicture = () => {
   const [count, setCount] = useState(0);
@@ -20,7 +21,6 @@ const LikePicture = () => {
 			<FontAwesomeIcon icon={faHeart} />
 		</button>
 		<div>
-			{/* <CommentBox /> */}
 			<Comment />
 		</div>
     </div>

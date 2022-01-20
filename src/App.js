@@ -5,7 +5,6 @@ import './App.css';
 import LikePicture from './components/LikePicture';
 import './sissel.css';
 
-
 function App() {
   return (
     <div className="App">
